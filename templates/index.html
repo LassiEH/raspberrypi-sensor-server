@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+        <h1> Hello, the date is {{ time }}</h1>
+        <h2> Status </h2>
+        <h3> Temperature is {{ temp }} degrees celsius</h3>
+        <h3> Pressure is {{ pres }} millibars</h3>
+        <h3> Humidity is {{ humi }} %</h3>
+
+        <h2> Commands </h2>
+        <h3> <a href="/fetch" class="button">Fetch sensor data</a> </h3>
+
+        <h3> <a href="/light" class="button">Toggle led on/off</a> </h3>
+
+        <h3> <a href="/historicalTemp" class="button">Show graph of historical temperature sensor values</a></h3>
+
+        <h3> <a href="/historicalPres" class="button">Show graph of historical pressure sensor values</a></h3>
+
+        <h3> <a href="/historicalHumi" class="button">Show graph of historical humidity sensor values</a></h3>
+
+        <h2> Graphs </h2>
+        <img src = "data:image/png;base64,{{ img }}" alt="Sensor data graph">
+        <h4> The average of the past 5 sensor readings is: {{ avg }}</h4>
+    </body>
+</html>
